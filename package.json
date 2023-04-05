@@ -1,0 +1,28 @@
+{
+  "name": "saddle-subgraph",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --max-warnings=0 src/ && prettier --list-different src/**/*.ts",
+    "lint:fix": "eslint src/ --fix && prettier --write src/**/*.ts",
+    "codegen": "graph codegen",
+    "auth":"graph auth --product hosted-service 544a0766e4380433b96bfc6be37e5629",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ sanchitdawarsd/4pool"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saddle-finance/saddle-subgraph.git"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "0.20.0",
+    "@graphprotocol/graph-ts": "0.20.0",
+    "@protofire/subgraph-toolkit": "0.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "1.19.1",
+    "typescript": "^4.2.3"
+  }
+  
+}
